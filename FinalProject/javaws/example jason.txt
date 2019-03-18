@@ -1,0 +1,10 @@
+
+"Orders":[
+	{"oId":1, "cId":4, "foodId":1001, "foodQty":2, "oReason":null,
+	"oStatus":'PLACE_ORDER', "oTotPrice":160, "oDate":'10-02-2019 12:00:00', "vId":501}
+]
+
+"Customers":[
+	{"cId":1, "cName":"JOHN", "cWallet":2000, "cPassword":"pass", "cEmail":xsa@vs.com, "cPhone":9545785245, "cAddress":"sadasdfsf"},
+	{"cId":2, "cName":"PAUL", "cWallet":5000, "cPassword":"pass", "cEmail":dfs@vs.com, "cPhone":9556785254, "cAddress":"sadasdfsf"}
+]

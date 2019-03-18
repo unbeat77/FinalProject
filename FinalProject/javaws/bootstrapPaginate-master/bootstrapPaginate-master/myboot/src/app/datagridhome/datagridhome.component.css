@@ -1,0 +1,42 @@
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+  min-width: 900px;
+  max-width: 950px;
+}
+.header {
+  background-color: #f1f1f1;
+  width: 150px;
+  margin: 5px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 20px;
+}
+.body{
+  background-color: #7BE907;
+  width: 150px;
+  margin: 5px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 16px;
+}
+.bodylogin{
+  background-color: #04E98D;
+  width: 150px;
+  margin: 5px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 16px;
+}
+.row {
+  background: #ED6262;
+  border: 1px solid grey;
+}
+
+.border {
+  all: 1px solid black;
+}

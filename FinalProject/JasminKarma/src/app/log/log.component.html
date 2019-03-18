@@ -1,0 +1,35 @@
+<div>
+  <h2>  Reactive Form with Login Validation</h2>
+    <form  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+         <label>User Name</label>
+         <input type="text" formControlName="uName" 
+                 class="form-control"/>
+         <div *ngIf="f.uName.touched && f.uName.errors" 
+                 class="alert alert-warning">
+             <div *ngIf="f.uName.errors.required">
+                   First Name is required
+             </div>
+         </div>
+      </div>
+      <div class="form-group">
+         <label>Password</label>
+         <input type="password" formControlName="password" 
+                 class="form-control" />
+         
+         <div *ngIf="f.password.touched && f.password.errors" 
+                 class="alert alert-danger">
+             <div *ngIf="f.password.errors.required">
+                 Password is required
+             </div>
+             <div *ngIf="f.password.errors.minlength">
+                 Password must be at least 2 characters..
+             </div>
+         </div>
+     
+      </div>
+      <div class="form-group">
+         <button class="btn btn-primary">Login</button>
+     </div>
+   </form>
+ </div>

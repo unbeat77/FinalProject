@@ -1,0 +1,32 @@
+<!--
+<p>
+  dashboard works!<br>
+
+  empcode value is : {{empCode}}
+</p>
+-->
+<div class="container">
+    <div class = "row" style="height: 100%">
+        <div class="col-sm-3 col-md-6 col-lg-4" 
+        style="background-color: lightsalmon;
+        padding-left: 30px; width: 30%">
+        
+        <nav class="navbar navbar-default">
+          <ul class="nav navbar-nav">
+            <li>
+              <a routerLink="childone">child one component</a>
+            </li> <br>
+            <li>
+              <a [routerLink]="['childtwo',empCode]">child two component</a>
+            </li><br>
+         </ul>
+        </nav>
+      </div>
+    
+      <div class="col-sm-9 col-md-6 col-lg-8" 
+      style="background-color: darkseagreen;
+      padding-left: 30px; width: 70%; height: 100%;">  
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>

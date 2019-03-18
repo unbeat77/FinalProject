@@ -1,0 +1,14 @@
+.boldClass{
+    font-weight: bold;
+}
+
+.italicsClass{
+    font-weight: italic;
+}
+
+.colorClass{
+    color: rgb(55, 0, 235);
+    font-family: 'jokerman'
+};
+
+

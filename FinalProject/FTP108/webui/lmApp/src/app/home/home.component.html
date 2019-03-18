@@ -1,0 +1,48 @@
+<p align="right">
+    <button class="btn btn-6 btn-6k" id="vLog" (click)='venlogin()'>Vendor Login</button>&nbsp;&nbsp;
+    <button class="btn btn-6 btn-6k" id="cLog" (click)='custlogin()'>Customer Login</button>&nbsp;&nbsp;
+</p>
+<hr>
+<div style="margin: auto; max-width: 95%">
+    <label>&nbsp;&nbsp;Veg Only&nbsp;&nbsp;</label>
+    <label class="switch">
+        <input type="checkbox" (click)="isToggle($event.target.checked)">
+        <span class="slider round"></span>
+    </label>
+</div>
+<div style="margin: auto; max-width: 95%">
+    <table class="table table-hover" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+        <thead style="background-color: black; color: white">
+            <tr>
+                <th style="width: 7%">Food Id</th>
+                <th style="width: 7%">Vendor Id</th>
+                <th style="width: 10%">Food Name</th>
+                <th style="width: 15%">Food Price</th>
+                <th style="width: 30%">Food Description</th>
+                <th style="width: 20%">Image</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div id="table-wrapper" style="margin: auto; max-width: 95%">
+    <div id="table-scroll">
+        <table class="table table-hover" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+            <tbody>
+                <tr *ngFor='let menu of menus'>
+                    <td style="width: 7%">{{menu.foodId}}</td>
+                    <td style="width: 7%">{{menu.venId}}</td>
+                    <td style="width: 11%">{{menu.foodName}}</td>
+                    <td style="width: 15%">{{menu.foodPrice}}</td>
+                    <td style="width: 30%">{{menu.foodDescription}}</td>
+                    <td style="width: 20%"><img src="../../assets/{{menu.foodId}}.png" alt="{{menu.foodName}}"
+                            height="100px" width="150px"></td>
+                </tr>
+                <tr *ngIf="!menus || menus.length==0">
+                    <td colspan="5">
+                        No menus to display
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

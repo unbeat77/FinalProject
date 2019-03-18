@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="card" *ngFor='let cus of customer'>
+    <br>
+    <h1>{{cus.cname}}</h1>
+    <hr>
+    <p class="title">#{{cus.cid}}</p>
+    <p>WALLET BAL : {{cus.cwallet}}</p>
+    <p>{{cus.cemail}}</p>
+    <p>{{cus.caddress}}</p>
+    <a href="#"><i class="fa fa-dribbble"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <p><button>{{cus.cphone}}</button></p>
+  </div>
+</div>

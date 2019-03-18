@@ -1,0 +1,38 @@
+button {
+  opacity: 0.8;
+  color: black;
+  background-color: transparent;
+  border-width: .5;
+  border-color:black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+button:hover { 
+  background-color: black;
+  color: white;
+  border-width: 2px;
+  border-color: black;
+}
+
+
+#table-wrapper {
+  position:relative;
+}
+#table-scroll {
+  height:20vmax;
+  overflow:auto;  
+  margin-top:20px;
+}
+#table-wrapper table {
+  width:100%;
+}
+
+#table-wrapper table thead th .text {
+  position:absolute;   
+  top:-20px;
+  z-index:2;
+  height:20px;
+  width:35%;
+  border:1px solid red;
+}

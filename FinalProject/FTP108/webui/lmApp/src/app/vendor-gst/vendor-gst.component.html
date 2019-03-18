@@ -1,0 +1,17 @@
+<div class="container" align="center">
+  <div>
+    <label>From</label><br>
+    <input type="date" [(ngModel)]="dt1" /><br>
+    <label>{{dt1}}</label>
+  </div>
+  <div>
+    <label>To</label><br>
+    <input type="date" [(ngModel)]="dt2" /><br>
+    <label>{{dt2}}</label><br>
+  </div>
+  <button id="gst"(click)="getGst()">go</button><br><br>
+  <pre>
+      <label style="font-size: 75%">The GST of State 2.5% + Central 2.5% From {{dt1}} to {{dt2}} is</label>
+  {{gst}}
+  </pre>
+</div>

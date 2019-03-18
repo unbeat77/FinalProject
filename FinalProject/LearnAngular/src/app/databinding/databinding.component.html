@@ -1,0 +1,22 @@
+<p>
+  databinding works!<br>
+  custom Input : {{customInputAttr}}
+</p>
+<h3>Learning Interopolation</h3>
+This is string : {{stringInterpolation}}<br>
+This is number : {{numberInterpolation}}<br>
+Example<br>
+number Interopolation: {{10+20+30}}<br>
+
+<h1>html:</h1> <input type="text" name = "uName" value="Abhi"/><br>
+<h1>string:</h1> <input type="text" name = "uName" value={{fName}}/><br>
+<h1>property:</h1> <input type="text" name = "uName" [value] = "fName"/><br>
+
+<h1>html:</h1> <button onclick="alert('html clicked')">Submit</button><br>
+<h2>Binding: </h2> <button (click) = "myalert()">Submit Bind</button><br>
+
+<h4>Two way binding:</h4>
+
+<input type = "text" name = "uName" [(ngModel)]="fName">
+
+<button [disabled] = 'disableflag' (click) = "toggle()">Toggle</button>

@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="card" *ngFor='let cus of customer'>
+    <br>
+    <p class="title">#{{cus.cid}}</p>
+    <hr>
+    <h4>(--: Wallet Bal :--)</h4>
+    <hr>
+    <h1>{{cus.cwallet}}</h1>
+    <p><button>{{cus.cname}}</button></p>
+  </div>
+</div>

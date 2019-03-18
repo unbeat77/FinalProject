@@ -1,0 +1,10 @@
+<div dropdown style="position: relative; display: inline-block" 
+*ngFor="let menuItem of menuItems">
+  <a href dropdownToggle (click)="false" type="button" 
+  class="btn btn-primary dropdown-toggle">{{menuItem.name}}</a>
+  <ul *dropdownMenu class="dropdown-menu" role="menu" >
+    <li *ngFor="let child of menuItem.children">
+      <a class="dropdown-item" href="#">{{child}}</a>
+    </li>
+  </ul>
+</div>

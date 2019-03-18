@@ -1,0 +1,66 @@
+
+<nav class="nav">
+  <img  src="https://hexaware.com/wp-content/themes/hexaware-main/images/Brand/dark-background/logo.png" alt="Card image cap"alt="Hexaware" align = "left">
+<h1 style="color:white" >Leave Management System</h1>
+</nav>
+<br><br><br>
+<br>
+
+
+<h2 align="center" style="color:#062f4f;">Employee details.. Please login to continue</h2><br><br>
+
+<div>
+
+<input type="text" [(ngModel)]="term" placeholder="Search..">
+<!-- <div *ngFor = "let employee of details |filter:term" >
+  <p>
+    {{employee.empName}}
+  </p>
+</div> -->
+
+</div>
+<br>
+
+
+<div table-responsive>
+  <table class="table table-bordered">
+    <thead>
+      <tr style="color:white" bgcolor="#062f4f" align="center">
+        <th >FirstName</th>
+        <th >LastName</th>
+        <th >Date Of Birth</th>
+        <th >Email</th>
+        <th >Salary</th>
+        <th >Login</th>
+      </tr>
+       
+    </thead>
+    
+      <tbody class = "Employees"> 
+        <tr *ngFor="let employee of employees |orderBy : key : reverse | filter:term |paginate : {itemsPerPage:3, currentPage:p}">
+        <td>
+          <h5>{{employee.firstName}}</h5>
+        </td>
+        <td >
+            <h5>{{employee.lastName}}</h5>
+          </td>
+        <td>
+            <h5>{{employee.dob}}</h5>
+          </td>
+          <td>
+              <h5>{{employee.email}}</h5>
+          </td>
+          <td>
+              <h5>{{employee.salary}}</h5>
+          </td>
+          <td>
+        <!-- <button class="button" (click)="handleClick(employee)">login</button> -->
+        <!-- <button class="nav-link" [routerLink]="['/login']">login</button> -->
+        <button class="btn btn-success" (click)="handleClick(employee.empId)">login</button>
+           </td>
+           </tr>
+         </tbody>
+      </table>
+
+  <pagination-controls (pageChange)="p=$event"></pagination-controls>
+</div>

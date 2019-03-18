@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "javaws_b3cce28"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Loop",
+            "request": "launch",
+            "mainClass": "Loop",
+            "projectName": "javaws_b3cce28"
+        }
+    ]
+}

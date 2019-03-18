@@ -1,0 +1,30 @@
+<div>
+  <tabset>
+    <tab heading="Basic title" id="tab1">
+      
+      <app-alertdemo></app-alertdemo>
+    </tab>
+    <tab heading="Basic Title 1">
+      <app-emppaginate></app-emppaginate>
+
+    </tab>
+    <tab heading="Basic Title 2">
+      
+      <div class="btn-group" dropdown>
+        <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+          Main Menu <span class="caret"></span>
+        </button>
+        <ul *dropdownMenu class="dropdown-menu" role="menu">
+          <li role="menuitem"><a class="dropdown-item" href="#C1">Employee Details</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#C2">LeaveHistory</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#C3">Manager Details</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#C4">Paginate</a>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" href="#C5">Logout</a>
+          </li>
+        </ul>
+      </div>
+
+    </tab>
+  </tabset>
+</div>

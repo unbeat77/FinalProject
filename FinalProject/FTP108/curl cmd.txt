@@ -1,0 +1,20 @@
+all vendor==> curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:8080/FTP108/api/vendor/all
+
+accep or deny =>  curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X PUT http://localhost:8080/FTP108/api/vendor/update -d '{"ostatus":"CANCELLED" , "oreason":"Out of stock","oid": 8, "vid":502}'
+
+place order ==> curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST http://localhost:8080/FTP108/api/customers/placeorder -d '{"cid":10 , "foodId": 1003 , "foodQty": 2}'
+
+vendor history==> curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:8080/FTP108/api/vendor/{502}
+
+customer history==> curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:8080/FTP108/api/customers/cushistory/{1}
+
+to see all customers ==> curl -vvv -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:8080/FTP108/api/customers/all
+
+verify customer==>  curl -vvv  -X GET 'http://localhost:8080/FTP108/api/customers?cName=PAUL&cPassword=PAUL@33'
+
+verify vendor ==>  curl -vvv -X GET 'http://localhost:8080/FTP108/api/vendor?vUsername=Dinesh&vPassword=password'
+
+all menu==>  menu =>  curl -vvv -X GET 'http://localhost:8080/FTP108/api/menu' 
+
+verify wallet==> curl -vvv -X GET 'http://localhost:8080/FTP108/api/customers/wallet/1'
+

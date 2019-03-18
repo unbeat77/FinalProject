@@ -1,0 +1,43 @@
+<div id="table-wrapper">
+    <div id="table-scroll">
+
+        <table class="table table-bordered table-hover"
+            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+            <thead style="background-color: black; color: white">
+                <tr style="text-align: center">
+                    <th>Order Id</th>
+                    <th>Customer Id</th>
+                    <th>Food Id</th>
+                    <th>Food Quantity</th>
+                    <th>Order Status</th>
+                    <th>Order Reason</th>
+                    <th>Total Price</th>
+                    <th>Estimated Time</th>
+                    <th>Order Time</th>
+                    <th>Order Date</th>
+                    <th>Vendor Id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let order of orders'>
+                    <td>{{order.oid}}</td>
+                    <td>{{order.cid}}</td>
+                    <td>{{order.foodId}}</td>
+                    <td>{{order.foodQty}}</td>
+                    <td>{{order.ostatus}}</td>
+                    <td>{{order.oreason}}</td>
+                    <td>{{order.ototPrice}}</td>
+                    <td>{{order.oestTime}}</td>
+                    <td>{{order.otime}}</td>
+                    <td>{{order.odate | date:'dd/MM/yyyy' | uppercase}}</td>
+                    <td>{{order.vid}}</td>
+                </tr>
+                <tr *ngIf="!orders || orders.length==0">
+                    <td colspan="5">
+                        No orders to display
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

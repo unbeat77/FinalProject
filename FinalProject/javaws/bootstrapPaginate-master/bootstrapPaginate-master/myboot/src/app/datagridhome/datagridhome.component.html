@@ -1,0 +1,54 @@
+
+<div class="container-fluid">
+    <div class="flex-container">
+       
+    
+      <div class="header">
+        <p>Employee FirstName</p>
+      </div>
+      <div class="header">
+          <p> Employee LastName</p>
+      </div>
+      <div class="header">
+          <p>Date Of Birth</p>
+      </div>
+      <div class="header">
+          <p>Email</p>
+      </div>
+      <div class="header">
+          <p>Salary</p>
+      </div>
+      <div class="header">
+        <p>Login</p>
+      </div>
+       
+      </div>
+    <div class="flex-container" *ngFor="let employee of employees">
+        <div class="body">
+          <p>{{employee.firstName}}</p>
+        </div>
+        <div class="body">
+            <p>{{employee.lastName}}</p>
+        </div>
+        <div class="body">
+            <p>{{employee.dob}}</p>
+        </div>
+        <div class="body">
+            <p>{{employee.email}}</p>
+        </div> 
+        <div class="body">
+            <p>{{employee.salary}}</p>
+        </div>
+        <div class="bodylogin">
+          <p>Login</p>
+        </div>
+    </div>
+<hr>
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+  </div>

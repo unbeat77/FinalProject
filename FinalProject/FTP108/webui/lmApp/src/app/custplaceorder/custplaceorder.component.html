@@ -1,0 +1,60 @@
+<label>&nbsp;&nbsp;Veg Only&nbsp;&nbsp;</label>
+<label class="switch">
+    <input type="checkbox" (click)="isToggle($event.target.checked)">
+    <span class="slider round"></span>
+</label>
+<div id="table-wrapper" >
+    <div id="table-scroll" style="margin: auto; max-width: 100%">
+        <table class="table table-hover" style="padding: 10px">
+            <thead style="background-color: black; color: white">
+                <tr style="text-align: center">
+                    <th></th>
+                    <th>Food&nbsp;Id</th>
+                    <th>Vendor&nbsp;Id</th>
+                    <th>Food&nbsp;Name</th>
+                    <th>Food&nbsp;Category</th>
+                    <th>Food&nbsp;Price</th>
+                    <th>Food&nbsp;Description</th>
+                    <th>Food&nbsp;Image</th>
+                    <th>Quantity</th>
+                    <th>Total&nbsp;Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let menu of menus'>
+                    <td>
+                        <input type="checkbox" fId='menu.foodId' [value]='menu.foodId'
+                            (click)='toggleSelect(menu,$event.target.checked)' [checked]="menu.isSelected" />
+                    </td>
+                    <td>{{menu.foodId}}</td>
+                    <td>{{menu.venId}}</td>
+                    <td>{{menu.foodName}}</td>
+                    <td>{{menu.foodCategory}}</td>
+                    <td>{{menu.foodPrice}}</td>
+                    <td>{{menu.foodDescription}}</td>
+                    <td><img src="../../assets/{{menu.foodId}}.png" height="100px" width="150px"></td>
+                    <td>
+                        <input type="number" class="form-control" id="qty" [disabled]='!menu.isSelected'
+                            [(ngModel)]="menu.qty" name="qty" #qty="ngModel" min="1" required>
+                        <span *ngIf="qty.invalid && qty.touched" style="color: red; font-family: Arial;
+                font-size: 85%">Quantity required!! </span>
+                        <span *ngIf="menu.qty <= 0" style="color: red; font-family: Arial;
+                font-size: 85%">Invalid</span>
+                    </td>
+                    <td>{{totPrice(menu)}}</td>
+                </tr>
+                <tr *ngIf="!menus || menus.length==0">
+                    <td colspan="9">
+                        No menus to display
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
+<button class="btn btn-6 btn-6k" id="insert" (click)="insertOrder()">Place Order</button>&nbsp;&nbsp;
+<button class="btn btn-6 btn-6k" id="cancel" (click)="resetAll()">Cancel</button><br><br>
+<pre style=" border: transparent; background: transparent; text-align: center">
+    <label *ngIf = 'ifpost' style="text-shadow: chocolate">{{postmsg}} </label>
+</pre>

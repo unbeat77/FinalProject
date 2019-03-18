@@ -1,0 +1,29 @@
+
+<table class = "table table-bordered table-hover " style="background-color:black; 
+color: rgb(128, 188, 245); font-family: Georgia">
+  <thead>
+      <tr>
+          <th>Food Id</th>
+          <th>Vendor Id</th>
+          <th>Food Name</th>
+          <th>Food Category</th>
+          <th>Food Price</th>
+          <th>FoodDescription</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor='let menu of menus'>
+          <td>{{menu.foodId}}</td>
+          <td>{{menu.vId}}</td>
+          <td>{{menu.foodName}}</td>
+          <td>{{menu.foodCategory}}</td>
+          <td>{{menu.foodPrice}}</td>
+          <td>{{menu.foodDescription}}</td>
+      </tr>
+      <tr *ngIf="!menus || menus.length==0">
+          <td colspan="6">
+              No menu to display
+          </td>
+      </tr>
+  </tbody>
+</table>

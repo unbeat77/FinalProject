@@ -1,0 +1,19 @@
+  button {
+    border: black;
+    border-style: inset;
+    outline: 0;
+    display: inline-block;
+    color: black;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  pre{
+      background-color: transparent;
+      border: transparent;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 18px;
+      font-weight: bolder;
+  }

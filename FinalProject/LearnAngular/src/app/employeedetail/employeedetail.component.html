@@ -1,0 +1,36 @@
+<table *ngIf="employee" style="background-color: whitesmoke">
+    <thead>
+      <th colspan="2">
+        Employee Details
+      </th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Employee code</td>
+        <td>{{employee.code}}</td>
+      </tr>
+      <tr>
+          <td>Employee name</td>
+          <td>{{employee.name}}</td>
+      </tr>
+      <tr>
+          <td>Employee gender</td>
+          <td>{{employee.gender}}</td>
+      </tr>
+      <tr>
+          <td> Annual Salary</td>
+          <td>{{employee.annualSalary}}</td>
+        </tr>
+      <tr>
+        <td> Date Of Birth</td>
+        <td>{{employee.dateOfBirth}}</td>
+      </tr>      
+    </tbody>
+  </table>
+  <div *ngIf="!employee"> 
+    {{statusMessage}}
+  </div>
+  <div> 
+    <input type="button" value = "Go to dashboard" (click) = "gotoDashboard()"/>
+    <input type="button" value = "Go to Employees List" (click) = "gotoEmployeeList()" />
+  </div>

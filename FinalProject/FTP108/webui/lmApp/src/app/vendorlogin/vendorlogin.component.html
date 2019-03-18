@@ -1,0 +1,33 @@
+<div class="container" align="center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+  <h3 style="position:relative; bottom:10px"><b><u>Vendor Login</u></b></h3>
+  <hr />
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="uname" style="position: relative; right: 120px; font-size: large"><b>Username
+          :</b></label>&nbsp;&nbsp;
+      <input type="text" class="form__field, form-control" style="width: 30%; border-radius: 0px"
+        formControlName="vusername" placeholder="Enter Your Username Here" />
+      <div *ngIf="f.vusername.touched && f.vusername.errors" style="width: 30%" class="alert alert-warning">
+        <div *ngIf="f.vusername.errors.required">First Name is Requierd
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="psw" style="position: relative; right: 120px; font-size: large"><b>Password :</b></label>&nbsp;&nbsp;
+      <input type="password" style="width: 30%; border-radius: 0px" class="form__field, form-control"
+        formControlName="vpass" placeholder="Enter Your Password Here" />
+      <span *ngIf="f.vpass.touched && f.vpass.errors" >
+        <div *ngIf="f.vpass.errors.required" style="width: 30%" class="alert alert-danger">Enter the password
+        </div>
+        <div *ngIf="f.vpass.errors.minlength">
+          Password must be at least 2 characters...
+        </div>
+      </span>
+    </div>
+    <div class="form-group">
+      <button class="button_login" style="position: relative; left: 0px"><span>Login</span></button>&nbsp;&nbsp;&nbsp;
+      <button class="button_cancel" style="position: relative; left: 0px"
+        (click)="gotohome()"><span>Cancel</span></button>&nbsp;&nbsp;
+    </div>
+  </form>
+</div>

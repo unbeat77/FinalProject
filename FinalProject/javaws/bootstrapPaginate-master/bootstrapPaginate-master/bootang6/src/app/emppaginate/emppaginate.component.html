@@ -1,0 +1,61 @@
+<nav class="nav">
+  <h1 style="color:white">Employee details</h1>
+</nav>
+<br><br><br>
+<br>
+
+
+<h2 align="center" style="color:#062f4f;">Please login to continue</h2><br><br>
+
+<div>
+
+  <input type="text" [(ngModel)]="term" placeholder="Search..">
+  <!-- <div *ngFor = "let employee of details |filter:term" >
+  <p>
+    {{employee.empName}}
+  </p>
+</div> -->
+
+</div>
+<br>
+
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr style="color:white" bgcolor="#062f4f" align="center">
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Date Of Birth</th>
+      <th>Email</th>
+      <th>Salary</th>
+      <th>Login</th>
+    </tr>
+
+  </thead>
+
+  <tbody class="Employees">
+    <tr *ngFor="let employee of dispEmps">
+      <td>
+        <h5>{{employee.firstName}}</h5>
+      </td>
+      <td>
+        <h5>{{employee.lastName}}</h5>
+      </td>
+      <td>
+        <h5>{{employee.dob}}</h5>
+      </td>
+      <td>
+        <h5>{{employee.email}}</h5>
+      </td>
+      <td>
+        <h5>{{employee.salary}}</h5>
+      </td>
+      <td>
+        <button class="btn btn-success" (click)="handleClick(employee.empId)">login</button>
+      </td>
+    </tr>
+  </tbody>
+  <pagination [totalItems]="count" [(ngModel)]="currentPage" [itemsPerPage]="itemperpage" (pageChanged)="pageChanged($event)"></pagination>
+</table>
+<!-- <pagination-controls (pageChange)="p=$event"></pagination-controls> -->

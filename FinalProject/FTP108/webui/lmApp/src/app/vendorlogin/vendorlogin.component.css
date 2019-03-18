@@ -1,0 +1,89 @@
+.button_login {
+  border-radius: 5px;
+  background-color: transparent;
+  border-style: ridge;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  width: 160px;
+  padding: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button_login span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button_login span:after {
+  content: '\2713';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+
+}
+.button_login:hover{
+  background: -webkit-linear-gradient(left, rgb(192, 255, 90), rgb(255, 255, 255));
+  color:darkgreen;
+  border-width: 0;
+}
+.button_login:hover span {
+  padding-right: 25px;
+}
+
+.button_login:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+.button_cancel {
+  border-radius: 5px;
+  background-color: transparent;
+  border-style: ridge;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  width: 160px;
+  padding: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button_cancel span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button_cancel span:after {
+  content: '\2715';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+
+}
+.button_cancel:hover{
+  background: -webkit-linear-gradient(left, rgb(226, 80, 80), rgb(255, 255, 255));
+  color:darkred;
+  border-width: 0;
+}
+.button_cancel:hover span {
+  padding-right: 25px;
+}
+
+.button_cancel:hover span:after {
+  opacity: 1;
+  right: 0;
+}

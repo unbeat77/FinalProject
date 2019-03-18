@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="card" *ngFor="let ven of vendor">
+        <br>
+        <h1>{{ven.vname}}</h1>
+        <hr>
+        <p class="title">#{{ven.vid}}</p>
+        <p>{{ven.vusername}}</p>
+        <p>{{ven.vemail}}</p>
+        <p>{{ven.vaddress}}</p>
+        <a href="#"><i class="fa fa-dribbble"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <p><button>{{ven.vphone}}</button></p>
+    </div>
+</div>
